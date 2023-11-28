@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package proto.echo;
+
+import "proto/service.proto";
+
+option go_package = "./proto";
+
+service Echo {
+  rpc Serve(dproto.TContext) returns (dproto.TContext);
+}

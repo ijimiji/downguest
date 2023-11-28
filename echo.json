@@ -1,0 +1,21 @@
+{
+    "name": "test",
+    "nodes": [
+        {
+            "name": "Echo",
+            "inputs": ["http_request"],
+            "output": "http_response",
+            "host": "localhost:8081"
+        }	
+    ],
+    "edges": [
+        {
+            "source": "origin_http_request",
+            "destination": "Echo"
+        },
+        {
+            "source": "Echo",
+            "destination": "origin_http_response"
+        }
+    ]
+}

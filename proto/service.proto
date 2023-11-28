@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package proto.dproto;
+
+option go_package = "./proto";
+
+import "google/protobuf/any.proto";
+
+message TContext {
+    map<string, google.protobuf.Any> data = 1;
+}
+
+message THTTPRequest {
+    string Body = 1;
+}
+
+message THTTPResponse {
+    string Body = 2;
+}
